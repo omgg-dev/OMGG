@@ -1,0 +1,6 @@
+[submodule "Project/Website/OMGG-Website"]
+	path = Project/Website/OMGG-Website
+	url = https://github.com/EnzoGrn/OMGG-Website
+[submodule "Project/Game/Vermines"]
+	path = Project/Game/Vermines
+	url = https://github.com/EnzoGrn/Vermines
