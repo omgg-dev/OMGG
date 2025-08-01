@@ -43,6 +43,7 @@ Projects are integrated here as **Git submodules** for better organisation.
 
 | Project | Description | Documentation |
 |---------|-------------|---------------|
+| [Package Template](https://github.com/omgg-dev/template-package) | A github template repository that aim to setup faster a new OMGG package. | [Wiki](https://github.com/omgg-dev/template-package/wiki) |
 
 ### 📦 Internal packages
 

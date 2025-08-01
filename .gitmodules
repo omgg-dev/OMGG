@@ -4,3 +4,6 @@
 [submodule "Project/Game/Vermines"]
 	path = Project/Game/Vermines
 	url = https://github.com/EnzoGrn/Vermines
+[submodule "Project/Template/package-template"]
+	path = Project/Template/package-template
+	url = https://github.com/omgg-dev/template-package
