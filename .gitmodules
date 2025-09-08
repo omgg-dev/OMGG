@@ -10,3 +10,7 @@
 	path = Project/Template/package-template
 	url = https://github.com/omgg-dev/template-package
     branch = main
+[submodule "Project/Template/package-game"]
+	path = Project/Template/package-game
+	url = https://github.com/omgg-dev/template-game
+	branch = main
