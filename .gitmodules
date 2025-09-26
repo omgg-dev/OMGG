@@ -14,3 +14,11 @@
 	path = Project/Template/package-game
 	url = https://github.com/omgg-dev/template-game
 	branch = main
+[submodule "Project/Package/Chronicle"]
+	path = Project/Package/Chronicle
+	url = git@github.com:omgg-dev/Chronicle.git
+	branch = main
+[submodule "Project/Package/Anti-AFK"]
+	path = Project/Package/Anti-AFK
+	url = git@github.com:omgg-dev/anti-afk.git
+	branch = main
