@@ -4,21 +4,20 @@ on:
     branches:
       - main
 
-env:
-  MIRROR_URL:
-    git@github.com:EpitechPromo2026/G-EIP-700-REN-7-1-eip-enzo.garnier.git
-
 jobs:
-  mirroring:
+  mirror:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          submodules: recursive
-      - uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url:
-            ${{ env.MIRROR_URL }}
-          ssh_private_key:
-            ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.MIRROR_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Mirror repository
+        run: |
+          git clone --mirror ${{ github.repositoryUrl }} repo.git
+          cd repo.git
+          git remote add mirror git@github.com:EpitechPromo2026/G-EIP-700-REN-7-1-eip-enzo.garnier.git
+          git push --mirror mirror
